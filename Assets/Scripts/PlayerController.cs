@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -44,5 +45,13 @@ public class PlayerController : MonoBehaviour
         }
         transform.Translate(Movement * Time.deltaTime);
         Movement = Movement * 0.99f;
+    }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log("OnCollisionEnter2D");
+        if (col.gameObject.name == "Oven")
+        {
+            SceneManager.LoadScene("Blacksmith", LoadSceneMode.Additive);
+        }
     }
 }
