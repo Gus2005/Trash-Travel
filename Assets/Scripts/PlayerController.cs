@@ -50,7 +50,10 @@ public class PlayerController : MonoBehaviour
     {
         
         {
+            if (collision.collider.tag == "Island")
+            {
 
+            }
         }
     }
 }
