@@ -45,4 +45,12 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Movement * Time.deltaTime);
         Movement = Movement * 0.99f;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        {
+
+        }
+    }
 }
