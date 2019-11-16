@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
     {
 
 
+<<<<<<< HEAD
+=======
         
         
             if (collision.collider.tag == "Island")
@@ -65,6 +67,7 @@ public class PlayerController : MonoBehaviour
 
 
 
+>>>>>>> 9c73765c309e0690d3c484eeb31d27286e5cb366
 
         if (collision.collider.tag == "Island")
         {
@@ -73,9 +76,12 @@ public class PlayerController : MonoBehaviour
         }
         else if(collision.gameObject.name == "Oven")
 
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 9c73765c309e0690d3c484eeb31d27286e5cb366
         {
             SceneManager.LoadScene("Blacksmith");
 
@@ -87,14 +93,13 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        
+
         if (col.gameObject.tag == "Trash")
         {
             PlayerController.Score += 1;
             Destroy(col.gameObject);
-            
+            CollectSound.Play();
         }
-        CollectSound.Play();
     }
 } 
             
