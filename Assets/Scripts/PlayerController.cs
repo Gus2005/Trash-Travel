@@ -62,12 +62,12 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("Trigger " + col.gameObject.tag);
+        
         if (col.gameObject.tag == "Trash")
         {
             PlayerController.Score += 1;
             Destroy(col.gameObject);
-            Debug.Log("Score " + PlayerController.Score);
+            
         }
     }
 }
