@@ -7,10 +7,11 @@ using TMPro;
 public class TimerScript : MonoBehaviour
 {
     public TextMeshProUGUI countdown;
-    static public int timeleft;
+    static public int timeleft = 127;
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine("LoseTime");
         Time.timeScale = 1;
     }
 
@@ -22,5 +23,9 @@ public class TimerScript : MonoBehaviour
     IEnumerator LoseTime()
     {
         while (true)
+        {
+            yield return new WaitForSeconds(1);
+            timeleft--;
+        }
     }
 }
