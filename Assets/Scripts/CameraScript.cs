@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
+    public Transform Target;
+    public Vector3 Offset;
+    public float smoothSpeed = 0.125f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -11,8 +15,10 @@ public class CameraScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        
+        //Vector3 desiredPosition = Target.position + Offset;
+        //Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+        transform.position = Target.position + Offset;
     }
 }
