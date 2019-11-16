@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             Movement = Vector2.down * Speed;
-//             BoatRB.AddForce(Speed * BackDirection);
+            //             BoatRB.AddForce(Speed * BackDirection);
         }
         if (Input.GetKey(KeyCode.D))
         {
@@ -50,17 +50,23 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+<<<<<<< HEAD
+
+=======
         if (collision.collider.tag == "Island")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         }
         else if(collision.gameObject.name == "Oven")
+>>>>>>> d7a79fc41c71eb78ce9065bfe74603a6c717920b
         {
             SceneManager.LoadScene("Blacksmith");
 
         }
     }
+
+    public AudioSource CollectSound;
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -71,5 +77,12 @@ public class PlayerController : MonoBehaviour
             Destroy(col.gameObject);
             
         }
+        CollectSound.Play();
     }
-}
+} 
+            
+    
+
+
+    
+
