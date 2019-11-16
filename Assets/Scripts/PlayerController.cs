@@ -50,16 +50,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-<<<<<<< HEAD
 
-=======
+
+
         if (collision.collider.tag == "Island")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         }
         else if(collision.gameObject.name == "Oven")
->>>>>>> d7a79fc41c71eb78ce9065bfe74603a6c717920b
         {
             SceneManager.LoadScene("Blacksmith");
 
