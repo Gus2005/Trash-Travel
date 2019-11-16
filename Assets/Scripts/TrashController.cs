@@ -21,7 +21,7 @@ public class TrashController : MonoBehaviour
     {
         if (collision.collider.tag == "Iceberg")
         {
-
+            Destroy
         }
     }
 }
