@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-<<<<<<< HEAD
+
         
         
             if (collision.collider.tag == "Island")
@@ -62,8 +62,8 @@ public class PlayerController : MonoBehaviour
         
 
 
-=======
->>>>>>> f7a2a9c611011dc483842e5598aa221f859818ff
+
+
 
 
         if (collision.collider.tag == "Island")
@@ -72,10 +72,10 @@ public class PlayerController : MonoBehaviour
 
         }
         else if(collision.gameObject.name == "Oven")
-<<<<<<< HEAD
 
-=======
->>>>>>> f7a2a9c611011dc483842e5598aa221f859818ff
+
+
+
         {
             SceneManager.LoadScene("Blacksmith");
 
