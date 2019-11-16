@@ -51,13 +51,13 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        {
+        
             if (collision.collider.tag == "Island")
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
             }
-        }
+        
     }
 
     void OnTriggerEnter2D(Collider2D col)
