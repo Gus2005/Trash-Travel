@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Trash
   - Iceberg
+  - Island
   layers:
   - Default
   - TransparentFX
