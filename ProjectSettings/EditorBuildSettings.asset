@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Island.unity
+    guid: 981a3ebb268515f4880cd8afe68d2e28
+  - enabled: 1
     path: Assets/Scenes/Blacksmith.unity
     guid: 514e791675d710741aff02c08345ee75
   m_configObjects: {}
