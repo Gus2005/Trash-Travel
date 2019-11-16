@@ -6,7 +6,7 @@ using TMPro;
 
 public class TimerScript : MonoBehaviour
 {
-    public TextMeshProUGUI TimerText;
+    public TextMeshProUGUI countdown;
     static public int timeleft;
     // Start is called before the first frame update
     void Start()
