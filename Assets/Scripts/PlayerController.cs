@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             Movement = Vector2.down * Speed;
-//             BoatRB.AddForce(Speed * BackDirection);
+            //             BoatRB.AddForce(Speed * BackDirection);
         }
         if (Input.GetKey(KeyCode.D))
         {
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+
         {
             if (collision.collider.tag == "Island")
             {
@@ -59,6 +59,8 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    public AudioSource CollectSound;
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -69,5 +71,12 @@ public class PlayerController : MonoBehaviour
             Destroy(col.gameObject);
             Debug.Log("Score " + PlayerController.Score);
         }
+        CollectSound.Play();
     }
-}
+} 
+            
+    
+
+
+    
+
