@@ -8,6 +8,7 @@ public class TimerScript : MonoBehaviour
 {
     public TextMeshProUGUI countdown;
     static public int timeleft = 127;
+    public TextMeshProUGUI ScoreText;   
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class TimerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ScoreText.text = PlayerController.Score.ToString();
         countdown.text = ("" + timeleft);
     }
     IEnumerator LoseTime()
