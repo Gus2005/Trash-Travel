@@ -16,12 +16,4 @@ public class TrashController : MonoBehaviour
     {
      
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Iceberg")
-        {
-            
-        }
-    }
 }
