@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public Vector2 BackDirection;
     public Vector2 RightDirection;
     public Vector2 LeftDirection;
+    public static int Score;
     // Start is called before the first frame update
     void Start()
     {
