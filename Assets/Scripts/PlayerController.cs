@@ -50,35 +50,22 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-
-
-
-        
-        
-            if (collision.collider.tag == "Island")
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-            }
-        
-
-
-
-
-
-
-
         if (collision.collider.tag == "Island")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (Score>= 25)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else
+            {
+                BoatRB.AddForce(Vector2)
+            }
 
         }
-        else if(collision.gameObject.name == "Oven")
+        //else if(collision.gameObject.name == "Oven")
 
 
-
-
+<<<<<<< HEAD
 
 
 
@@ -87,6 +74,9 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Blacksmith");
 
         }
+=======
+       
+>>>>>>> 6f8b1d1c672da9ce0716422e60b2871f50008b31
 
     }
 
