@@ -7,8 +7,8 @@ public class Blacksmith : MonoBehaviour {
     float randX;
     float randY;
     Vector2 WhereToSpawn;
-}
-{
+
+
     // Start is called before the first frame update
     void Start()
     {
