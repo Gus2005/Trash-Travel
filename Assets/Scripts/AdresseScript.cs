@@ -10,7 +10,7 @@ public class AdresseScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(Adresse);
     }
 
     // Update is called once per frame

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Blacksmith : MonoBehaviour {
     public GameObject boat;
@@ -22,10 +23,11 @@ public class Blacksmith : MonoBehaviour {
     }
     public void BuyBoat()
     {
-        randX = (0);
-        randY = (0);
-        WhereToSpawn = new Vector2(randX, randY);
-        Instantiate(boat, WhereToSpawn, Quaternion.identity);
+        if (PlayerController.Score >= 25)
+        {
+            SceneManager.LoadScene(4);
+        }
+        
     }
 
 }
