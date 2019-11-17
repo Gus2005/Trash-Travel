@@ -97,4 +97,5 @@ public class EskimoController : MonoBehaviour
                 Movement = Movement * 0.99f;
             }
         }
+    }
       
