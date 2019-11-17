@@ -16,7 +16,7 @@ public class EskimoController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     // Update is called once per frame
     void Update()
@@ -97,4 +97,6 @@ public class EskimoController : MonoBehaviour
                 Movement = Movement * 0.99f;
             }
         }
+    }
+}
       
