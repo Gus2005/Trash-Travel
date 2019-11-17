@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Blacksmith : MonoBehaviour {
-    public GameObject boat;
     float randX;
     float randY;
     Vector2 WhereToSpawn;
@@ -23,10 +22,12 @@ public class Blacksmith : MonoBehaviour {
     }
     public void BuyBoat()
     {
-        if (PlayerController.Score >= 25)
-        {
+        
+        
+            TimerScript.timeleft = 127;
+        PlayerController.Score = 0;
             SceneManager.LoadScene(4);
-        }
+        
         
     }
 

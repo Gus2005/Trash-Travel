@@ -2,31 +2,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D BoatRB;
+    public TextMeshProUGUI getscoretext;
+    public TextMeshProUGUI gettoisland;
     public int Speed;
-    public int HorizontalSpeed;
+    public Vector2 gettoislandnow;
     public Vector2 Movement;
     public Vector2 ForwardDirection;
-    public Vector2 BackDirection;
+    public Vector2 BackDirection;   
     public Vector2 RightDirection;
     public Vector2 LeftDirection;
     public static int Score;
+    public static int mission;
+    public TextMeshProUGUI missiontext;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gettoisland.transform.position = new Vector2(-193, -500);
+        mission = 25;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.O))
+        if (Input.GetKey(KeyCode.Escape))
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(0);
+
         }
+        print(BoatRB.position);
+      
+        missiontext.text = mission.ToString();
+  
         //print(BoatRB.position);
         if (Input.GetKey(KeyCode.W))
         {
@@ -50,6 +62,12 @@ public class PlayerController : MonoBehaviour
         }
         transform.Translate(Movement * Time.deltaTime);
         Movement = Movement * 0.99f;
+        if (mission <= 0)
+        {
+            Destroy(getscoretext);
+            Destroy(missiontext);
+            gettoisland.transform.position = gettoislandnow;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -101,18 +119,27 @@ public class PlayerController : MonoBehaviour
     {
         if (col.gameObject.tag == "Trash")
         {
+            
+
             PlayerController.Score += 1;
             Destroy(col.gameObject);
-
-            var audioSource = GetComponents<AudioSource>()[1];
-            audioSource.clip = CollectSound;
-            audioSource.Play();
+            mission -= 1;
+            
+        }
+        if (col.gameObject.tag == "Island")
+        {
+            if (Score > PlayerPrefs.GetInt("HighScore", 0))
+            {
+                PlayerPrefs.SetInt("Highscore", Score); 
+            }
         }
     }
-} 
-            
-    
+}
 
 
+
+//var audioSource = GetComponents<AudioSource>()[1];
+//audioSource.clip = CollectSound;
+            //audioSource.Play();
     
 

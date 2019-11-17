@@ -22,7 +22,15 @@ public class EskimoController : MonoBehaviour
     void Update()
 
     {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
 
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            PlayerController.Score = 25;
+        }
         print(EskimoRB.rotation);
         //print(EskimoRB.position);
         if (Input.GetKey(KeyCode.W))

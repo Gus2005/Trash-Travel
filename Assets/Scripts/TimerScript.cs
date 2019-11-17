@@ -9,7 +9,8 @@ public class TimerScript : MonoBehaviour
 {
     public TextMeshProUGUI countdown;
     static public int timeleft = 127;
-    public TextMeshProUGUI ScoreText;   
+    public TextMeshProUGUI ScoreText;
+    public TextMeshProUGUI Adress;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,14 +22,13 @@ public class TimerScript : MonoBehaviour
     void Update()
     {
         ScoreText.text = PlayerController.Score.ToString();
-        countdown.text = ("" + timeleft);
+        countdown.text = ("" + timeleft + ".0.0.1");
 
         if (timeleft <= 0)
         {
-            PlayerController.Score = 0;
-            SceneManager.LoadScene(4);
+                
+            SceneManager.LoadScene(5);
         }
-        
     }
     IEnumerator LoseTime()
     {

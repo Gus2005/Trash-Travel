@@ -19,5 +19,14 @@ public class YourScore : MonoBehaviour
     void Update()
     {
         yourscore.text = PlayerController.Score.ToString();
+    }  
+    void SnowflakeRetry()
+    {
+        SceneManager.LoadScene(2);
     }
+    void BoatRetry()
+    {
+        SceneManager.LoadScene(4);
+    }
+
 }
