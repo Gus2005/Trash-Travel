@@ -23,6 +23,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.O))
+        {
+            SceneManager.LoadScene(4);
+        }
         //print(BoatRB.position);
         if (Input.GetKey(KeyCode.W))
         {
