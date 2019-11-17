@@ -95,16 +95,18 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public AudioSource CollectSound;
+    public AudioClip CollectSound;
 
     void OnTriggerEnter2D(Collider2D col)
     {
-
         if (col.gameObject.tag == "Trash")
         {
             PlayerController.Score += 1;
             Destroy(col.gameObject);
-            CollectSound.Play();
+
+            var audioSource = GetComponents<AudioSource>()[1];
+            audioSource.clip = CollectSound;
+            audioSource.Play();
         }
     }
 } 
