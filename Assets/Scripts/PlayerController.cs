@@ -50,42 +50,22 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-
-
-
-        
-        
-            if (collision.collider.tag == "Island")
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-            }
-        
-
-
-
-
-
-
-
         if (collision.collider.tag == "Island")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (Score>= 25)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else
+            {
+                BoatRB.AddForce(Vector2)
+            }
 
         }
-        else if(collision.gameObject.name == "Oven")
+        //else if(collision.gameObject.name == "Oven")
 
 
-
-
-
-
-
-        {
-            SceneManager.LoadScene("Blacksmith");
-
-        }
+       
 
     }
 
