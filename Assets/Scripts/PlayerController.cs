@@ -77,16 +77,14 @@ public class PlayerController : MonoBehaviour
         }
         else if(collision.gameObject.name == "Oven")
 
-<<<<<<< HEAD
-
-=======
 
 
 
 
 
 
->>>>>>> e9aca70b0222378327b21cf1173e639d7b4fd809
+
+
         {
             SceneManager.LoadScene("Blacksmith");
 
