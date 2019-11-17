@@ -7,6 +7,8 @@ TagManager:
   - Trash
   - Iceberg
   - Island
+  - LeaveIsland1
+  - LeaveIsland2
   layers:
   - Default
   - TransparentFX

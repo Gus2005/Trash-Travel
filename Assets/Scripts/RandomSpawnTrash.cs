@@ -27,8 +27,8 @@ public class RandomSpawnTrash : MonoBehaviour
             {
                 MaxSpawn += 1;
                 NextSpawn = Time.time + SpawnRate;
-                randX = Random.Range(-122f, 34f);
-                randY = Random.Range(-48f, 80f);
+                randX = Random.Range(-140f, 65f);
+                randY = Random.Range(-60f, 100f);
                 WhereToSpawn = new Vector2(randX, randY);
                 Instantiate(trash, WhereToSpawn, Quaternion.identity);
             }

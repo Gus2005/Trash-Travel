@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 153284441}
   - component: {fileID: 153284440}
   - component: {fileID: 153284439}
+  - component: {fileID: 153284442}
   m_Layer: 0
   m_Name: Square (3)
   m_TagString: Untagged
@@ -312,6 +313,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &153284442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153284438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18936fe9793776e489ebec2aa55346ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &376440468
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +403,7 @@ GameObject:
   - component: {fileID: 805065809}
   - component: {fileID: 805065808}
   - component: {fileID: 805065807}
+  - component: {fileID: 805065810}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -486,6 +500,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &805065810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805065806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18936fe9793776e489ebec2aa55346ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1139845539
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +523,7 @@ GameObject:
   - component: {fileID: 1139845542}
   - component: {fileID: 1139845541}
   - component: {fileID: 1139845540}
+  - component: {fileID: 1139845543}
   m_Layer: 0
   m_Name: Square (2)
   m_TagString: Untagged
@@ -593,6 +620,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &1139845543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139845539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18936fe9793776e489ebec2aa55346ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1257834185
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +795,7 @@ GameObject:
   - component: {fileID: 1706641202}
   - component: {fileID: 1706641201}
   - component: {fileID: 1706641200}
+  - component: {fileID: 1706641203}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Untagged
@@ -852,6 +892,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1706641203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706641199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18936fe9793776e489ebec2aa55346ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1733388240
 GameObject:
   m_ObjectHideFlags: 0
