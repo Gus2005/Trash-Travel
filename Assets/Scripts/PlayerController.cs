@@ -50,6 +50,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+
+
+
+
+
+
+  
         if (collision.collider.tag == "Island")
         {
             if (Score>= 25)
@@ -58,14 +66,28 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                //BoatRB.AddForce(new Vector2, - Speed);
+
+                //BoatRB.AddForce(Vector2);
+
             }
 
         }
+
+        else if(collision.gameObject.name == "Oven")
+
         //else if(collision.gameObject.name == "Oven")
 
 
+
+
+
+        {
+            SceneManager.LoadScene("Blacksmith");
+
+        }
+
        
+
 
     }
 
