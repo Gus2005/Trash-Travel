@@ -52,6 +52,7 @@ public class EskimoController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
+
         if(collision.collider.tag == "Island")
         {
             print("Works");
@@ -68,4 +69,3 @@ public class EskimoController : MonoBehaviour
 
     }
 }
-
