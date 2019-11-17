@@ -20,92 +20,44 @@ public class EskimoController : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
+
     {
-        //print(EskimoRB.rotation);
-        print(EskimoRB.position);
 
-        //print(EskimoRB.rotation);
+        print(EskimoRB.rotation);
         //print(EskimoRB.position);
-
-
         if (Input.GetKey(KeyCode.W))
         {
             Movement = Vector2.down * Speed;
-            transform.eulerAngles = Vector3.forward * 180;
-            //BoatRB.AddForce(Speed * ForwardDirection);
-
-            {
-
-                print(EskimoRB.rotation);
-                //print(EskimoRB.position);
-                if (Input.GetKey(KeyCode.W))
-                {
-                    Movement = Vector2.down * Speed;
-                    transform.eulerAngles = new Vector3(0, 0, -180);
-
-                }
-                if (Input.GetKey(KeyCode.S))
-                {
-
-                    Movement = Vector2.up * Speed;
-                    transform.eulerAngles = Vector3.down * -180;
-                    //BoatRB.AddForce(Speed * BackDirection);
-                }
-                if (Input.GetKey(KeyCode.D))
-                {
-                    Movement = Vector2.left * Speed;
-                    transform.eulerAngles = Vector3.right * 90;
-
-                    Movement = Vector2.down * Speed;
-                    transform.eulerAngles = new Vector3(0, 0, 0);
-                }
-                if (Input.GetKey(KeyCode.D))
-                {
-                    Movement = Vector2.down * Speed;
-                    transform.eulerAngles = new Vector3(0, 0, 90);
-
-                    //             BoatRB.AddForce(Speed * BackDirection);
-                }
-                if (Input.GetKey(KeyCode.D))
-                {
-                    Movement = Vector2.right * Speed;
-                    //BoatRB.AddForce(HorizontalSpeed * RightDirection);
-                }
-                if (Input.GetKey(KeyCode.A))
-                {
-
-                    Movement = Vector2.right * Speed;
-                    transform.eulerAngles = Vector3.left * -90;
-
-
-                    Movement = Vector2.down * Speed;
-                    transform.eulerAngles = new Vector3(0, 0, -90);
-
-                    Movement = Vector2.left * Speed;
-
-
-                    //BoatRB.AddForce(HorizontalSpeed * LeftDirection);
-
-                }
-                if (Input.GetKey(KeyCode.A))
-                {
-                    Movement = Vector2.down * Speed;
-                    transform.eulerAngles = new Vector3(0, 0, -90);
-
-                }
-                transform.Translate(Movement * Time.deltaTime);
-                Movement = Movement * 0.99f;
-            }
+            transform.eulerAngles = new Vector3(0, 0, -180);
         }
+        if (Input.GetKey(KeyCode.S))
+        {
+            Movement = Vector2.down * Speed;
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            Movement = Vector2.down * Speed;
+            transform.eulerAngles = new Vector3(0, 0, 90);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            Movement = Vector2.down * Speed;
+            transform.eulerAngles = new Vector3(0, 0, -90);
+        }
+        transform.Translate(Movement * Time.deltaTime);
+        Movement = Movement * 0.99f;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-        
+
+        if(collision.collider.tag == "Island")
+        {
             print("Works");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
         
+
 
     }
 }
-      
