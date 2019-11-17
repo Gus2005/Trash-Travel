@@ -21,49 +21,31 @@ public class EskimoController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-<<<<<<< HEAD
+    { 
+
         print(EskimoRB.rotation);
         //print(EskimoRB.position);
-=======
->>>>>>> 2c12dfac0daea342af1950b09f5653ea534deceb
         if (Input.GetKey(KeyCode.W))
         {
-            Movement = Vector2.up * Speed;
-            //BoatRB.AddForce(Speed * ForwardDirection);
+            Movement = Vector2.down * Speed;
+            transform.eulerAngles = new Vector3(0, 0, -180);
         }
         if (Input.GetKey(KeyCode.S))
         {
             Movement = Vector2.down * Speed;
-<<<<<<< HEAD
-            transform.eulerAngles = Vector3.down * -180;
-            //BoatRB.AddForce(Speed * BackDirection);
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
         if (Input.GetKey(KeyCode.D))
         {
             Movement = Vector2.down * Speed;
             transform.eulerAngles = new Vector3(0, 0, 90);
-=======
-            //             BoatRB.AddForce(Speed * BackDirection);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            Movement = Vector2.right * Speed;
->>>>>>> 2c12dfac0daea342af1950b09f5653ea534deceb
-            //BoatRB.AddForce(HorizontalSpeed * RightDirection);
         }
         if (Input.GetKey(KeyCode.A))
-        {
-<<<<<<< HEAD
+        { 
             Movement = Vector2.down * Speed;
-            transform.eulerAngles = new Vector3(0, 0, -90); 
-=======
-            Movement = Vector2.left * Speed;
->>>>>>> 2c12dfac0daea342af1950b09f5653ea534deceb
-            //BoatRB.AddForce(HorizontalSpeed * LeftDirection);
+            transform.eulerAngles = new Vector3(0, 0, -90);
         }
         transform.Translate(Movement * Time.deltaTime);
         Movement = Movement * 0.99f;
-        
     }
 }
