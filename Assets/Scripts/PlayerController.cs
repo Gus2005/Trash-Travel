@@ -53,31 +53,53 @@ public class PlayerController : MonoBehaviour
 
 
 
+
+
+
+
+  
         if (collision.collider.tag == "Island")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (Score>= 25)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else
+            {
+                BoatRB.AddForce(Vector2)
+            }
 
         }
+
         else if(collision.gameObject.name == "Oven")
+
+        //else if(collision.gameObject.name == "Oven")
+
+
+
+
 
         {
             SceneManager.LoadScene("Blacksmith");
 
         }
+
+       
+
+
     }
 
     public AudioSource CollectSound;
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        
+
         if (col.gameObject.tag == "Trash")
         {
             PlayerController.Score += 1;
             Destroy(col.gameObject);
-            
+            CollectSound.Play();
         }
-        CollectSound.Play();
     }
 } 
             
