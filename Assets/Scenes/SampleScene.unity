@@ -11930,6 +11930,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trash: {fileID: 8926117830049736365, guid: e33f9a60130fc914fa6b7521967238b6, type: 3}
+  trashs: {fileID: 85622206}
+  trashh: {fileID: 417403847}
+  traash: {fileID: 980739434}
+  trhuie: {fileID: 164293448}
   SpawnRate: 0.0001
   NextSpawn: 0
   MaxSpawn: 30
