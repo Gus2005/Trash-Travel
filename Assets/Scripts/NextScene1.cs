@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class NextScene : MonoBehaviour
+using UnityEngine.UI;
+using TMPro;
+public class NextScene1 : MonoBehaviour
 {
+    public TextMeshProUGUI yourscore;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,7 @@ public class NextScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        yourscore.text = PlayerController.Score.ToString();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -22,7 +24,7 @@ public class NextScene : MonoBehaviour
         {
             print("Works");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }   
-           
+        }
+
     }
 }
