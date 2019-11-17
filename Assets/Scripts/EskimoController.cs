@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class EskimoController : MonoBehaviour
 {
     public Rigidbody2D EskimoRB;
@@ -23,7 +23,7 @@ public class EskimoController : MonoBehaviour
     void Update()
     { 
 
-        print(EskimoRB.rotation);
+        //print(EskimoRB.rotation);
         //print(EskimoRB.position);
         if (Input.GetKey(KeyCode.W))
         {
@@ -47,5 +47,14 @@ public class EskimoController : MonoBehaviour
         }
         transform.Translate(Movement * Time.deltaTime);
         Movement = Movement * 0.99f;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        
+            print("Works");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
+
     }
 }

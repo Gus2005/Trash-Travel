@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                BoatRB.AddForce(Vector2)
+                
             }
 
         }
