@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     public Vector2 RightDirection;
     public Vector2 LeftDirection;
     public static int Score;
-    public GameObject trash;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,42 +54,38 @@ public class PlayerController : MonoBehaviour
 
 
 
-        
-        
-            if (collision.collider.tag == "Island")
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-            }
-        
 
 
 
-
-
-
-
+  
         if (collision.collider.tag == "Island")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (Score>= 25)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else
+            {
+                BoatRB.AddForce(Vector2);
+            }
 
         }
+
         else if(collision.gameObject.name == "Oven")
 
-<<<<<<< HEAD
-
-=======
+        //else if(collision.gameObject.name == "Oven")
 
 
 
 
 
-
->>>>>>> e9aca70b0222378327b21cf1173e639d7b4fd809
         {
             SceneManager.LoadScene("Blacksmith");
 
         }
+
+       
+
 
     }
 
@@ -102,14 +97,9 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.tag == "Trash")
         {
             PlayerController.Score += 1;
-            //trash.GetComponent<Renderer>().enabled = false;
             Destroy(col.gameObject);
+            CollectSound.Play();
         }
-         CollectSound.Play();
-    }
-    private void OnDestroy()
-    {
-        
     }
 } 
             

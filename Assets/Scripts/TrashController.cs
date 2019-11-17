@@ -8,7 +8,7 @@ public class TrashController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Trash = Trash;
+        
     }
 
     // Update is called once per frame

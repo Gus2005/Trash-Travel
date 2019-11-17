@@ -282,6 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1257834187}
   - component: {fileID: 1257834186}
+  - component: {fileID: 1257834188}
   m_Layer: 0
   m_Name: island2
   m_TagString: Untagged
@@ -352,6 +353,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1257834188
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257834185}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.734688, y: 7.1697264, z: 0.2}
+  m_Center: {x: 5.3207684, y: -7.3744025, z: 0}
 --- !u!1 &1733388240
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,13 +442,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733388240}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.57, y: -4.74, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1733388243
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -515,7 +529,7 @@ MonoBehaviour:
   Speed: 3
   HorizontalSpeed: 0
   Movement: {x: 0, y: 0}
-  ForwardDirection: {x: 0, y: 1}
+  ForwardDirection: {x: 0, y: -1}
   BackDirection: {x: 0, y: -1}
   RightDirection: {x: 1, y: 0}
   LeftDirection: {x: -1, y: 0}
