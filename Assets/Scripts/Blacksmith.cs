@@ -22,7 +22,10 @@ public class Blacksmith : MonoBehaviour {
     }
     public void BuyBoat()
     {
-
+        randX = (0);
+        randY = (0);
+        WhereToSpawn = new Vector2(randX, randY);
+        Instantiate(boat, WhereToSpawn, Quaternion.identity);
     }
 
 }
