@@ -52,25 +52,20 @@ public class EskimoController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-<<<<<<< HEAD
         if(collision.collider.tag == "Island")
         {
             print("Works");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         
-=======
+
 
         print("Works");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
->>>>>>> bc3e43d5e84e7b0c33ab016cee9589e40ec101f5
+
 
 
     }
 }
-<<<<<<< HEAD
-=======
 
-      
->>>>>>> bc3e43d5e84e7b0c33ab016cee9589e40ec101f5
