@@ -22,8 +22,8 @@ public class EskimoController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //print(EskimoRB.rotation);
-        print(EskimoRB.position);
+        print(EskimoRB.rotation);
+        //print(EskimoRB.position);
         if (Input.GetKey(KeyCode.W))
         {
             Movement = Vector2.down * Speed;
@@ -32,23 +32,24 @@ public class EskimoController : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.S))
         {
-            Movement = Vector2.up * Speed;
+            Movement = Vector2.down * Speed;
             transform.eulerAngles = Vector3.down * -180;
             //BoatRB.AddForce(Speed * BackDirection);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            Movement = Vector2.left * Speed;
-            transform.eulerAngles = Vector3.right * 90;
+            Movement = Vector2.down * Speed;
+            transform.eulerAngles = new Vector3(0, 0, 90);
             //BoatRB.AddForce(HorizontalSpeed * RightDirection);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            Movement = Vector2.right * Speed;
-            transform.eulerAngles = Vector3.left * -90;
+            Movement = Vector2.down * Speed;
+            transform.eulerAngles = new Vector3(0, 0, -90); 
             //BoatRB.AddForce(HorizontalSpeed * LeftDirection);
         }
         transform.Translate(Movement * Time.deltaTime);
         Movement = Movement * 0.99f;
+        
     }
 }
