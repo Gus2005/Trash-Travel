@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public Vector2 RightDirection;
     public Vector2 LeftDirection;
     public static int Score;
+    public GameObject trash;
     // Start is called before the first frame update
     void Start()
     {
@@ -92,9 +93,14 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.tag == "Trash")
         {
             PlayerController.Score += 1;
+            //trash.GetComponent<Renderer>().enabled = false;
             Destroy(col.gameObject);
         }
          CollectSound.Play();
+    }
+    private void OnDestroy()
+    {
+        
     }
 } 
             
